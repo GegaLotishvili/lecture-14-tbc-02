@@ -1,0 +1,30 @@
+.s-1 {
+    background-color: bisque;
+    padding: 100px 0;
+    .container {
+        max-width: 1180px;
+        width: 100%;
+        margin: 0 auto;
+        .wrapper {
+            border: 1px solid gray;
+            height: 600px;
+            @include goflex(row, space-around, flex-end, wrap);
+            .card1 {
+                @extend %mycard;
+            }
+            .card2 {
+                @extend %mycard;
+            }
+            .card3 {
+                @extend %mycard;
+            }
+            .card4 {
+                @extend %mycard;
+            }
+        }
+    }
+}
+
+.testcard {
+    @extend %mycard;
+}

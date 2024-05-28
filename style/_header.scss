@@ -1,0 +1,54 @@
+header {
+    background-color: aquamarine;
+    padding: 10px 0;
+    .container {
+        max-width: 1180px;
+        width: 100%;
+        margin: 0 auto;
+        @include goflex(row, space-between, center, nowrap);
+        @media (max-width: 1200px) {
+            width: 95%;
+        }
+        @media (max-width: 800px) {
+            width: 90%;
+        }
+        > a {
+            font-size: 56px;
+            color: rgb(224, 92, 92);
+            @media (max-width: 800px) {
+                font-size: 44px;
+            }
+        }
+        nav {
+            @media (max-width: 600px) {
+                display: none;
+            }
+            ul {
+                display: flex;
+                gap: 30px;
+                a {
+                    font-size: 36px;
+                    color: rgb(224, 92, 92);
+                    &:hover {
+                        color: hotpink;
+                    }
+                    @media (max-width: 800px) {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+        .fa-bars {
+            font-size: 36px;
+            color: rgb(224, 92, 92);
+            display: none;
+            &:hover {
+                color: hotpink;
+                cursor: pointer;
+            }
+            @media (max-width: 600px) {
+                display: inline-block;
+            }
+        }
+    }
+}
